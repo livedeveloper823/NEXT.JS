@@ -68,11 +68,11 @@ export default function RootLayout({
                 height={100}
               />
               <div>
-                <Link href={"/home"} className="px-4">SHOWROOM</Link>
-                <Link href={"/dashboard"} className="px-4">SERVICES</Link>
-                <Link href={"/pricing"} className="px-4">FINANCING</Link>
-                <Link href={"/dashboard"} className="px-4">ABOUT US</Link>
-                <Link href={"/dashboard"} className="px-4">CONTACT US!</Link>
+                <Link href={"/showroom"} className="px-4">SHOWROOM</Link>
+                <Link href={"/services"} className="px-4">SERVICES</Link>
+                <Link href={"/financing"} className="px-4">FINANCING</Link>
+                <Link href={"/aboutus"} className="px-4">ABOUT US</Link>
+                <Link href={"/contactus"} className="px-4">CONTACT US!</Link>
               </div>
               <button className="bg-[#BF9550] p-5 rounded-full">APPLY FOR FINANCING</button>
             </div>
