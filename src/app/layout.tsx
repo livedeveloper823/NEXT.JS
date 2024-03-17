@@ -19,55 +19,69 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="p-10 mx-20">
-          <div className="flex gap-10 justify-center my-4">
-            <div className="flex gap-3">
-              <Image
-                src="assets/icons/headersearchico.svg"
-                alt="search"
-                width={25}
-                height={25}
-              />
-              What are you looking for?
+        <div>
+          <header className="p-10 mx-20 sticky top-0">
+            <div className="flex gap-10 justify-center my-4">
+              <div className="flex gap-3">
+                <Image
+                  src="assets/icons/headersearchico.svg"
+                  alt="search"
+                  width={25}
+                  height={25}
+                />
+                What are you looking for?
+              </div>
+              <div className="flex gap-3">
+                <Image
+                  src="assets/icons/headerphoneico.svg"
+                  alt="phone"
+                  width={25}
+                  height={25}
+                />
+                +1 250 585 7880
+              </div>
+              <div className="flex gap-3">
+                <Image
+                  src="assets/icons/headeremailico.svg"
+                  alt="email"
+                  width={25}
+                  height={25}
+                />
+                info@allenmarine.ca
+              </div>
+              <div className="flex gap-3">
+                <Image
+                  src="assets/icons/headerregionico.svg"
+                  alt="region"
+                  width={25}
+                  height={25}
+                />
+                2229 McCullough Rd, Nanaimo, BC, V9S 4M7
+              </div>
             </div>
-            <div className="flex gap-3">
+            <hr />
+            <div className="flex justify-center items-center gap-20 my-5">
               <Image
-                src="assets/icons/headerphoneico.svg"
-                alt="phone"
-                width={25}
-                height={25}
+                src="/logo.png"
+                alt="logo"
+                width={200}
+                height={100}
               />
-              +1 250 585 7880
+              <div>
+                <Link href={"/home"} className="px-4">SHOWROOM</Link>
+                <Link href={"/dashboard"} className="px-4">SERVICES</Link>
+                <Link href={"/pricing"} className="px-4">FINANCING</Link>
+                <Link href={"/dashboard"} className="px-4">ABOUT US</Link>
+                <Link href={"/dashboard"} className="px-4">CONTACT US!</Link>
+              </div>
+              <button className="bg-[#BF9550] p-5 rounded-full">APPLY FOR FINANCING</button>
             </div>
-            <div className="flex gap-3">
-              <Image
-                src="assets/icons/headeremailico.svg"
-                alt="email"
-                width={25}
-                height={25}
-              />
-              info@allenmarine.ca
-            </div>
-            <div className="flex gap-3">
-              <Image
-                src="assets/icons/headerregionico.svg"
-                alt="region"
-                width={25}
-                height={25}
-              />
-              2229 McCullough Rd, Nanaimo, BC, V9S 4M7
-            </div>
-          </div>
-          <hr />
-          <div className="my-5 text-center">
-            <Link href={"/home"} className="px-4">Home</Link>
-            <Link href={"/dashboard"} className="px-4">Dashboard</Link>
-            <Link href={"/pricing"} className="px-4">Pricing</Link>
-            <Link href={"/dashboard"}>Dashboard</Link>
-          </div>
-        </header>
-        {children}
-        <footer>CopyRight&copy;</footer>
+          </header>
+          <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            {children}
+          </main>
+          <footer className="text-center">CopyRight&copy;</footer>
+        </div>
       </body>
     </html >
   );
