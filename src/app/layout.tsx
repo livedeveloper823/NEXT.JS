@@ -19,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-          <nav className="p-10 mx-20 sticky top-0">
+        <div>
+          <header className="p-10 mx-20 sticky top-0">
             <div className="flex gap-10 justify-center my-4">
               <div className="flex gap-3">
                 <Image
@@ -75,11 +76,12 @@ export default function RootLayout({
               </div>
               <button className="bg-[#BF9550] p-5 rounded-full">APPLY FOR FINANCING</button>
             </div>
-          </nav>
+          </header>
           <main>
             {children}
           </main>
           <footer className="text-center bottom-0">CopyRight&copy;</footer>
+        </div>
       </body>
     </html >
   );
