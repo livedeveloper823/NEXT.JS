@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +18,57 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <body className={inter.className}>
+        <header className="p-10 mx-20">
+          <div className="flex gap-10 justify-center my-4">
+            <div className="flex gap-3">
+              <Image
+                src="assets/icons/headersearchico.svg"
+                alt="search"
+                width={25}
+                height={25}
+              />
+              What are you looking for?
+            </div>
+            <div className="flex gap-3">
+              <Image
+                src="assets/icons/headerphoneico.svg"
+                alt="phone"
+                width={25}
+                height={25}
+              />
+              +1 250 585 7880
+            </div>
+            <div className="flex gap-3">
+              <Image
+                src="assets/icons/headeremailico.svg"
+                alt="email"
+                width={25}
+                height={25}
+              />
+              info@allenmarine.ca
+            </div>
+            <div className="flex gap-3">
+              <Image
+                src="assets/icons/headerregionico.svg"
+                alt="region"
+                width={25}
+                height={25}
+              />
+              2229 McCullough Rd, Nanaimo, BC, V9S 4M7
+            </div>
+          </div>
+          <hr />
+          <div className="my-5 text-center">
+            <Link href={"/home"} className="px-4">Home</Link>
+            <Link href={"/dashboard"} className="px-4">Dashboard</Link>
+            <Link href={"/pricing"} className="px-4">Pricing</Link>
+            <Link href={"/dashboard"}>Dashboard</Link>
+          </div>
+        </header>
+        {children}
+        <footer>CopyRight&copy;</footer>
+      </body>
+    </html >
   );
 }
