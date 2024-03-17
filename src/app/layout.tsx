@@ -77,10 +77,10 @@ export default function RootLayout({
               <button className="bg-[#BF9550] p-5 rounded-full">APPLY FOR FINANCING</button>
             </div>
           </header>
-          <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+          <main>
             {children}
           </main>
-          <footer className="text-center">CopyRight&copy;</footer>
+          <footer className="text-center bottom-0">CopyRight&copy;</footer>
         </div>
       </body>
     </html >
